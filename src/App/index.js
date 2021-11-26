@@ -12,7 +12,7 @@ function App() {
     <BrowserRouter>
       <Header />
       <AddPost/>
-      <POST title='Poste 1' description ='Descrption 1' image ='image 1' />
+      
       <Switch>
       
       </Switch>
