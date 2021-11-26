@@ -2,13 +2,14 @@ import React from 'react';
 import './App.css';
 import {  } from 'module';
 import Header from "../components/Header";
+import PostsPage from '../pages/Posts';
 
 function App() {
 
     return (
       <div className="App"> 
       <Header />
-      <h1>Mainboard</h1>
+      <PostsPage title='Poste 1' description ='Descrption 1' image ='image 1' />
       </div>
 
     );

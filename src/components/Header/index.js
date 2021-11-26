@@ -1,14 +1,15 @@
 import React from 'react'
-//import styles from '../components/Header.module.css'
+import styles from './Header.module.css'
 
 function Header ()  {
   return (
-    <div >
+    <div className={styles.header}>
         <h1>Shipterest</h1>
-        <button className="home" onClick="">home</button>
-        <button className="ADD" onClick="">Ajouter</button>
+        <div className={styles.header}>
+          <button className="home" onClick="">home</button>
+          <button className="ADD" onClick="">Ajouter</button>
+        </div>
       
-        <h2>Hello pinterest</h2>
     </div>
   )
 }
