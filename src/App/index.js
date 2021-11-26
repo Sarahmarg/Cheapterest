@@ -1,10 +1,9 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import './App.css';
 
-import Header from "components/Header";
+import Header from "../components/index";
 import AddPost from "../page/home";
 import POST from "../page/home";
-// Exercices
 
 
 
