@@ -2,30 +2,22 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import './App.css';
 
 import Header from "components/Header";
-
+import AddPost from "../page/home";
+import POST from "../page/home";
 // Exercices
-import FirstComponentExercice from 'exercices/FirstComponent'
-import StylingComponentsExercice from 'exercices/StylingComponents'
-import ContextsExercice from 'exercices/Contexts'
+
+
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
+      <AddPost/>
+      <POST title='Poste 1' description ='Descrption 1' image ='image 1' />
       <Switch>
-        <Route path="/first-component">
-          <FirstComponentExercice />
-        </Route>
-        <Route path="/styling-components">
-          <StylingComponentsExercice />
-        </Route>
-        <Route path="/contexts">
-          <ContextsExercice />
-        </Route>
-        <Route path="/">
-          <FirstComponentExercice />
-        </Route>
+      
       </Switch>
+      <Route/>
     </BrowserRouter>
   );
 }
