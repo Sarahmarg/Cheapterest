@@ -2,9 +2,34 @@
   background-color: black;
   display: flex;
   color: gray;
+  font-size: 25px;
   align-items: center;
-  padding: 1em;
+  padding: 0.5em;
 }
+
+
+.flexbutton {
+  align-items: flex-end;
+  display: flex;
+  justify-content:flex-end;
+}
+
+
+.button {
+  margin-left: 3em;
+  background-color: gray; 
+  font-family:'Roboto';
+  font-weight: bold;
+  border: none;
+  color: rgb(0, 0, 0);
+  border-radius: 8px;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+
 
 .menu {
   display: flex;

@@ -4,12 +4,11 @@ import styles from './Header.module.css'
 function Header ()  {
   return (
     <div className={styles.header}>
-        <h1>Shipterest</h1>
-        <div className={styles.header}>
-          <button className="home" onClick="">home</button>
-          <button className="ADD" onClick="">Ajouter</button>
-        </div>
-      
+        <h1>Cheapterest</h1>
+          <div className={styles.flexbutton}>
+          <button className={styles.button} onClick="">home</button>
+          <button className={styles.button} onClick="">Ajouter</button>
+          </div>
     </div>
   )
 }
