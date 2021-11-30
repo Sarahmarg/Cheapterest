@@ -1,3 +1,4 @@
+import { getByText } from '@testing-library/dom';
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom';
 
@@ -15,12 +16,13 @@ function PostsPage(props) {
 
     return (
         <div>
-            <input onChange={GetUrl} type="text"></input>
-
-            
             <h3 >{props.title}</h3>
-            <p>{props.description}</p>
+            <input onChange={GetUrl} type="text"></input>
             <img src={image}></img>
+            <p>{props.description}</p>
+            <input onChange={getByText} type="text"></input>
+            <p>{props.motscles}</p>
+            <input onChange={getByText} type="text"></input>
         </div>
     )
 }
