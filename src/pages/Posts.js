@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import styles from '../components/Header/Header.module.css'
 
 
 function PostsPage(props) {
@@ -36,6 +37,12 @@ function PostsPage(props) {
 
             <label>Description</label>
             <input onChange={handChangeDescription} type="text" value ={description}></input>
+       
+
+            <br/>
+            <br/>
+            <button className={styles.button} onClick="">Ajouter</button>
+        
         </div>
     )
 }
