@@ -1,28 +1,41 @@
-import { getByText } from '@testing-library/dom';
-import React, { useEffect, useState } from 'react'
-import ReactDOM from 'react-dom';
+
+import React, { useState } from 'react';
 
 
 function PostsPage(props) {
 
     console.log(props)
 
-    const [image, setImage] = useState(0)
-    const [url, setUrl] = useState(0)
+    const [url, setUrl] = useState('')
+    const [image, setImage] = useState('')
+    const [title, setTitle] = useState ('')
+    const[description, setDescription] = useState ('')
     
-    const GetUrl = (event) => {
+    const handChangeUrl = (event) => {
+        setUrl(event.target.value)
         setImage(event.target.value)
+    }
+
+    const handChangeTitle = (event) => {
+        setTitle (event.target.value)
+    }
+
+    const handChangeDescription = (event) => {
+        setDescription (event.target.value)
     }
 
     return (
         <div>
-            <h3 >{props.title}</h3>
-            <input onChange={GetUrl} type="text"></input>
-            <img src={image}></img>
-            <p>{props.description}</p>
-            <input onChange={getByText} type="text"></input>
-            <p>{props.motscles}</p>
-            <input onChange={getByText} type="text"></input>
+            <label>Url de l'image</label>
+            <input onChange={handChangeUrl} type="text" value={url}></input><br/>
+            <img src={image} alt="introuvable"></img><br/>
+
+
+            <label>Titre</label>
+            <input onChange={handChangeTitle} type="text" value={title}></input><br/>
+
+            <label>Description</label>
+            <input onChange={handChangeDescription} type="text" value ={description}></input>
         </div>
     )
 }
