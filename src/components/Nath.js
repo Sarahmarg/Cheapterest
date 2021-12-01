@@ -4,7 +4,7 @@ const Nath = () => {
     return (
         <div>
             <Header/>
-            <p>sal</p>
+            
         </div>
     )
 }
