@@ -5,12 +5,13 @@ import styles from '../components/Header/Header.module.css'
 
 function PostsPage(props) {
 
-    console.log(props)
 
-    const [url, setUrl] = useState('')
-    const [image, setImage] = useState('')
-    const [title, setTitle] = useState ('')
-    const[description, setDescription] = useState ('')
+    const [url, setUrl] = useState()
+    const [image, setImage] = useState()
+    const [title, setTitle] = useState ()
+    const[description, setDescription] = useState ()
+    const [item, setItem] = useState([])
+    console.log(item)
     
     const handChangeUrl = (event) => {
         setUrl(event.target.value)
@@ -25,6 +26,14 @@ function PostsPage(props) {
         setDescription (event.target.value)
     }
 
+//
+    const addItemandClean = () => {
+        setItem([...item, {url,title,description}])
+        setImage('')
+        setUrl('')
+        setDescription('')
+        setTitle('')
+    }
     return (
         <div>
             <label>Url de l'image</label>
@@ -41,7 +50,8 @@ function PostsPage(props) {
 
             <br/>
             <br/>
-            <button className={styles.button} onClick="">Ajouter</button>
+            <button className={styles.button} onClick={() => addItemandClean()}>Publier</button>
+
         
         </div>
     )
