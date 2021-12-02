@@ -5,7 +5,7 @@ import styles from '../components/Header/Header.module.css'
 //Publier un post
 function PostsPage(props) {
 
-//Definir l'url et l'image, le titre et la description
+//Definir l'url, le titre et la description
     const [url, setUrl] = useState()
     const [image, setImage] = useState()
     const [title, setTitle] = useState ()
@@ -50,6 +50,7 @@ function PostsPage(props) {
             <label>Description</label>
             <input onChange={handChangeDescription} type="text" value ={description}></input>
             <select>
+
     <option value="montagne">Montagne</option>
     <option value="nature">Nature</option>
     <option value="ville">Ville</option>

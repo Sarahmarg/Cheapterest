@@ -1,5 +1,4 @@
 import React from 'react'
-import home from '../../pages/ButtonHome'
 import styles from './Header.module.css'
 
 
@@ -7,7 +6,8 @@ function Header ()  {
   return (
     <div className={styles.header}>
         <h1>Cheapterest</h1>
-          <button className={styles.button} onClick={home}>home</button>
+          <a className={styles.button} href="/addpost">Ajouter un post</a>
+          <a className={styles.button} href="/Nath">home</a>
     
     </div>
   )
