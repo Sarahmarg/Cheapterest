@@ -1,5 +1,8 @@
 
 import { useState } from "react";
+import PostsPage from "./Posts";
+
+//Page d'accueil
 
 const Nath = () => {
     const data = [
@@ -15,7 +18,7 @@ const Nath = () => {
       }
     ];
 
-    const [items] = useState(data)
+    const [items] = useState(item)
     console.log(items)
 
     return (
