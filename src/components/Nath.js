@@ -1,9 +1,5 @@
 import Header from "./Header/header"
-<<<<<<< HEAD
-import styles from "./Header/Header.module.css"
-=======
 import React, { useState } from 'react';
->>>>>>> 7dfb2bbbeba8e1d0cb7f054adfceaf8a1106076e
 
 const Nath = () => {
     const data = [
@@ -25,13 +21,6 @@ const Nath = () => {
     return (
         <div>
             <Header/>
-<<<<<<< HEAD
-            <br/>
-            <br/>
-            <button className={styles.button} onClick="">Ajouter</button>
-            <br/>
-            <p>sal</p>
-=======
             {items.map(function (item) {
               return (
                 <div>
@@ -46,7 +35,6 @@ const Nath = () => {
             })}
 
       
->>>>>>> 7dfb2bbbeba8e1d0cb7f054adfceaf8a1106076e
         </div>
         
     )
