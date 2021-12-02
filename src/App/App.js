@@ -1,17 +1,19 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom'
-import Sarah from '../components/Sarah';
-import Nath from '../components/Nath';
+import PostsPage from '../pages/Posts';
+import Header from '../components/Header/header';
 
+//L'arborescence de la page jouter un post
 function App() {
+
     return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Sarah/>}/>
-          <Route path="/nathael" element={<Nath/>}/>
-        </Routes>
-      </BrowserRouter>
+      <div>
+        <Header/>
+          <div className="App"> 
+            <PostsPage />
+          </div>
+      </div>
+
     );
 }
 
