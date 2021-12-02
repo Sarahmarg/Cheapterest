@@ -40,14 +40,16 @@ function PostsPage(props) {
             <input onChange={handChangeUrl} type="text" value={url}></input><br/>
             <img src={image} alt="introuvable"></img><br/>
 
-
             <label>Titre</label>
             <input onChange={handChangeTitle} type="text" value={title}></input><br/>
 
             <label>Description</label>
             <input onChange={handChangeDescription} type="text" value ={description}></input>
-       
-
+            <select>
+    <option value="montagne">Montagne</option>
+    <option value="nature">Nature</option>
+    <option value="ville">Ville</option>
+            </select>
             <br/>
             <br/>
             <button className={styles.button} onClick={() => addItemandClean()}>Publier</button>
