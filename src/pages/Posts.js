@@ -10,6 +10,7 @@ function PostsPage(props) {
     const [image, setImage] = useState()
     const [title, setTitle] = useState ()
     const[description, setDescription] = useState ()
+    const [category, setCategory]=useState ()
     const [item, setItem] = useState([])
     console.log(item)
 
@@ -27,6 +28,22 @@ function PostsPage(props) {
         setDescription (event.target.value)
     }
 
+    const handChangeCategory = (event) => {
+        switch (event.target.value) {
+            case "montagne":
+                setCategory ("montagne")
+                break
+            case "nature":
+                setCategory ("nature")
+                break
+            case "ville":
+                setCategory ("ville")
+                break
+            default:
+                console.log('catégorie inconnue.')
+        }
+    }
+
 //Fonction qui enregistre les valeurs dans le tableau Item et réhinitialise les champs
     const addItemandClean = () => {
         setItem([...item, {url,title,description}])
@@ -34,6 +51,7 @@ function PostsPage(props) {
         setUrl('')
         setDescription('')
         setTitle('')
+    
     }
 
     const clean = () => {
@@ -57,11 +75,11 @@ function PostsPage(props) {
 
             <label>Description</label>
             <input onChange={handChangeDescription} type="text" value ={description}></input>
-            <select>
+            <select onChange={handChangeCategory}>
 
-    <option value="montagne">Montagne</option>
-    <option value="nature">Nature</option>
-    <option value="ville">Ville</option>
+                <option value="montagne">Montagne</option>
+                <option value="nature">Nature</option>
+                <option value="ville">Ville</option>
             </select>
             <br/>
             <br/>
