@@ -5,7 +5,7 @@ import styles from '../components/Header/Header.module.css'
 //Publier un post
 function PostsPage(props) {
 
-//Definir l'url, le titre et la description
+//Definir les composant de l'url, du titre et de la description
     const [url, setUrl] = useState()
     const [image, setImage] = useState()
     const [title, setTitle] = useState ()
@@ -13,7 +13,7 @@ function PostsPage(props) {
     const [item, setItem] = useState([])
     console.log(item)
 
-//Prendre les champs rédigé par l'utilisateur et les définit en valeurs
+//Prendre les champs rédigé par l'utilisateur et les définir en valeurs
     const handChangeUrl = (event) => {
         setUrl(event.target.value)
         setImage(event.target.value)
@@ -34,6 +34,14 @@ function PostsPage(props) {
         setUrl('')
         setDescription('')
         setTitle('')
+    }
+
+    const clean = () => {
+        setImage('')
+        setUrl('')
+        setDescription('')
+        setTitle('')
+
     }
 
 
@@ -59,6 +67,7 @@ function PostsPage(props) {
             <br/>
 
             <button className={styles.button} onClick={() => addItemandClean()}>Publier</button>
+            <button className={styles.button} onClick={() => clean }>Réhinitialiser</button>
 
         
         </div>
