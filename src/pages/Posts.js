@@ -72,16 +72,16 @@ function PostsPage(props) {
 
 
     return (
-        <div>
-            <label>Url de l'image</label>
+        <div className="container-addpost">
+            <label className='url-input'>Url de l'image : </label>
             <input onChange={handChangeUrl} type="text" value={url}></input><br/>
             
-            <img src={url} alt="introuvable"></img><br/>
+            <img className='introuvable-input'src={url} alt="introuvable"></img><br/>
 
-            <label>Titre</label>
+            <label className='titre-input'>Titre : </label>
             <input onChange={handChangeTitle} type="text" value={title}></input><br/>
 
-            <label>Description</label>
+            <label className='description-input'>Description : </label>
             <input onChange={handChangeDescription} type="text" value ={description}></input>
             
             <select onChange={handChangeCategory}>
@@ -94,7 +94,7 @@ function PostsPage(props) {
             <br/>
 
             <button className={styles.button} onClick={() => addItemandClean()}>Publier</button>
-            <button className={styles.button} onClick={() => clean() }>Réhinitialiser</button>
+            <button className={styles.button} onClick={() => clean() }>Réinitialiser</button>
 
         
         </div>
