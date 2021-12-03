@@ -50,3 +50,51 @@
   text-decoration: none;
   color: white;
 }
+
+.category {
+  display: block;
+  margin-top:1em;
+  margin-left: 3.5em;
+  padding: 0.2em;
+  padding-right: 2.5em;
+  padding-left: 1em;
+  border: 3px solid rgb(190, 190, 190);
+  width: 120px;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.category:hover {
+  background-color: rgb(190, 190, 190);
+}
+
+.category select {
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-size: 20px;
+  
+  width: 130%;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background-color: transparent;
+}
+.category:after {
+  top: 50%;
+  left: 85%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+
+  border-width: 5px;
+  margin-top: -2px;
+  z-index: 100;
+
+}
