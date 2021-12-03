@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import Home from "../pages/Home"
 
-//L'arborescence de la page jouter un post
+//L'arborescence de la page ajouter un post
 function App() {
   const [items, setItems] = useState([])
 
