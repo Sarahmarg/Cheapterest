@@ -1,23 +1,24 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../components/Header/Header.module.css'
 
 //Publier un post
 function PostsPage(props) {
+    console.log (props.onSubmit)
 
-//Definir les composant de l'url, du titre et de la description
+
+    //Definir les composant de l'url, du titre et de la description
     const [url, setUrl] = useState()
     const [image, setImage] = useState()
     const [title, setTitle] = useState ()
     const[description, setDescription] = useState ()
-    const [category, setCategory]=useState ()
+    const [category, setCategory]= useState('montagne')
     const [item, setItem] = useState([])
-    console.log(item)
 
-//Prendre les champs rédigé par l'utilisateur et les définir en valeurs
+    //Prendre les champs rédigé par l'utilisateur et les définir en valeurs
     const handChangeUrl = (event) => {
         setUrl(event.target.value)
-        setImage(event.target.value)
+        // setImage(event.target.value)
     }
 
     const handChangeTitle = (event) => {
@@ -44,9 +45,16 @@ function PostsPage(props) {
         }
     }
 
-//Fonction qui enregistre les valeurs dans le tableau Item et réhinitialise les champs
+    //Fonction qui enregistre les valeurs dans le tableau Item et réhinitialise les champs
     const addItemandClean = () => {
-        setItem([...item, {url,title,description}])
+        // setItem([...item, {url,title,description}])
+        props.onSubmit({
+            url: url, 
+            title: title, 
+            description: description,
+            category: category
+            
+        })
         setImage('')
         setUrl('')
         setDescription('')
@@ -75,6 +83,7 @@ function PostsPage(props) {
 
             <label>Description</label>
             <input onChange={handChangeDescription} type="text" value ={description}></input>
+            
             <select onChange={handChangeCategory}>
 
                 <option value="montagne">Montagne</option>
@@ -85,7 +94,7 @@ function PostsPage(props) {
             <br/>
 
             <button className={styles.button} onClick={() => addItemandClean()}>Publier</button>
-            <button className={styles.button} onClick={() => clean }>Réhinitialiser</button>
+            <button className={styles.button} onClick={() => clean() }>Réhinitialiser</button>
 
         
         </div>

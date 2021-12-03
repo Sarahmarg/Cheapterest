@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import PostsPage from '../pages/Posts';
 import Header from '../components/Header/header';
@@ -6,33 +6,37 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
-import Nath from "../pages/Nath"
+import Home from "../pages/Home"
 
 //L'arborescence de la page jouter un post
 function App() {
+  const [items, setItems] = useState([])
 
-    return (
-      <div>
-        <Header/>
-          <div className="App"> 
-            
-            <Router>
-              <Switch>
-                <Route exact path="/Nath">
-                  <Nath />
-                </Route>
-                <Route path="/addpost">
-                  <PostsPage />
-                </Route>
-              </Switch>
-            </Router>
-          </div>
-      </div>
+  const addItem = (item) => {
+    setItems([...items, item])
+  }
+  
+
+  return (
+    <div>
+      <Router>
+        <Header />
+        <div className="App">
+          <Switch>
+            <Route exact path="/">
+              <Home posts={items} />
+            </Route>
+            <Route path="/addpost">
+              <PostsPage onSubmit={addItem} />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    </div>
 
 
-    );
+  );
 }
 
 export default App
