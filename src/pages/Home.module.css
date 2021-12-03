@@ -1,0 +1,92 @@
+.category {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:3em;
+    padding: 0.5em;
+    padding-right: 2.5em;
+    padding-left: 2em;
+    border: 3px solid rgb(190, 190, 190);
+    width: 120px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.category:hover {
+    background-color: rgb(190, 190, 190);
+}
+
+.category select {
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 25px;
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+}
+.category:after {
+    top: 50%;
+    left: 85%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+
+    border-width: 5px;
+    margin-top: -2px;
+    z-index: 100;
+
+}
+
+
+.span {
+    text-align :center;
+    font-family: 'Roboto';
+    font-size: 20px;
+
+}
+
+.post {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:1em;
+    margin-bottom: 1em;
+    padding:2em;
+    border: 3px solid rgb(190, 190, 190);
+    width: 50%;
+    border-radius: 20px;
+}
+
+.title {
+    margin-left: 5%;
+    margin-bottom: 1em;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.image {
+    display: block;
+    margin-left: 10%;
+    height: 20em;
+    width: auto;
+
+}
+
+.description {
+    margin-top: 1em;
+    margin-left: 8%;
+    font-family: 'Roboto';
+    font-size: 20px;
+
+}
